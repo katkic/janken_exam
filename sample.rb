@@ -1,7 +1,7 @@
 class Player
   def hand
-    # コンソールを入力待ち状態にし、
-    # プレイヤーがコンソールから打ち込んだ値を出力する処理のメソッドの処理をこの中に作成する
+    puts '数字を入力してください', '0: グー', '1: チョキ', '2: パー'
+    gets.to_i
   end
 end
 
@@ -21,7 +21,8 @@ class Janken
 end
 
 player = Player.new
-enemy = Enemy.new
-janken = Janken.new
+player.hand
+# enemy = Enemy.new
+# janken = Janken.new
 
-janken.pon(player.hand, enemy.hand)
+# janken.pon(player.hand, enemy.hand)
