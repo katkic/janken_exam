@@ -23,7 +23,7 @@ class Janken
       enemy_hand = enemy.hand
       puts '', "player: #{hands[player_hand]}", "enemy: #{hands[enemy_hand]}", ''
 
-      if !(player_hand == '0' || player_hand == '1' || player_hand == '2')
+      if player_hand.size != 1 || player_hand !~ /[0-2]/
         puts '不正な値が入力されました。0〜2の数字を入力してください', ''
       elsif player_hand == enemy_hand
         puts 'あいこです、もう一回！', ''
