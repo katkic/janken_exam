@@ -1,7 +1,7 @@
 class Player
   def hand
     puts '数字を入力してください', '0: グー', '1: チョキ', '2: パー', ''
-    puts '最初はグー、ジャンケン...', ''
+    puts '最初はグー、ジャンケン...'
     gets.chomp
   end
 end
@@ -21,7 +21,7 @@ class Janken
     loop do
       player_hand = player.hand
       enemy_hand = enemy.hand
-      puts "player: #{hands[player_hand]}", "enemy: #{hands[enemy_hand]}"
+      puts '', "player: #{hands[player_hand]}", "enemy: #{hands[enemy_hand]}", ''
 
       if !(player_hand == '0' || player_hand == '1' || player_hand == '2')
         puts '不正な値が入力されました。0〜2の数字を入力してください', ''
